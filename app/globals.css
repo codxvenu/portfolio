@@ -24,3 +24,27 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+html{
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+}
+
+.slideUp{
+  height: 60px;
+  transition: height 0.3s ease-out;
+  overflow: hidden;
+}
+.itm:hover .slideUp{
+  height: 106px;
+}
+
+
+.itmImage {
+  transform: scaleY(.8);
+  transform-origin: top;
+  transition: transform 200ms ease-in-out;
+}
+
+.itm:hover .itmImage {
+  transform: scaleY(.7);
+}
