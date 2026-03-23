@@ -21,6 +21,10 @@ const SearchHeader = ({ setQuery }) => {
               onChange={(e)=>setQuery(e.target.value.toLowerCase())}
             />
           </div>
+<<<<<<< HEAD
+=======
+        
+>>>>>>> c1baefe1f6e09d2646c8333e0c2b0e33e481e543
       </div>
      
     </>
