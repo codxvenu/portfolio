@@ -14,17 +14,14 @@ const router = useRouter();
     setPost(posts.filter(i=>i.threadId === innerThread.toLowerCase()));
   },[])
   return (
-    <div className="bg-black text-white min-h-screen flex justify-center max-h-max mb-12">
-      <div className="w-full max-w-md border-x border-neutral-900 relative">
-      
-      <ThreadHeader activeThread={innerThread} onClick={()=>router.push("/"+window.location.pathname.split("/")[0])}/>
+<>
+      <ThreadHeader activeThread={innerThread} onClick={()=>router.back()}/>
    
         <Posts
           postz={post}
           activeThread={true}
-        />
-       
-      </div>
-    </div>
+          />
+          </>
+   
   );
 }

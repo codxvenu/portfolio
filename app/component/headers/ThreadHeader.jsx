@@ -7,10 +7,12 @@ const Header = ({ onClick,activeThread }) => {
   return (
     <>
       <div className="flex items-center gap-3 px-4 py-3 border-b border-neutral-800">
+        <button onClick={onClick}>
         <ChevronRight
           className="cursor-pointer text-neutral-400 hover:text-white transition"
-          onClick={onClick}
+          
         />
+        </button>
         <small className="text-sm font-medium text-neutral-300 capitalize">{activeThread}</small>
       </div>
 

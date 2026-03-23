@@ -1,5 +1,7 @@
  import {
+   GithubIcon,
   Goal,
+  IconAI,
   IconArchitecture,
   IconContext,
   IconDesign,
@@ -8,6 +10,8 @@
   IconLearning,
   IconWorkflow,
   Intro,
+  LinkedinIcon,
+  Mail,
   PIntro,
   Projects,
   Qoute,
@@ -17,7 +21,7 @@
     {
       Icon: <Intro />,
       category: "Introduction",
-      username: "@VenuSharma",
+      username: "@introduction",
       time: "Now",
       skills: {
         "Full-stack JavaScript Engineer": "",
@@ -25,6 +29,7 @@
       text: `Hello,My name is Venu Sharma.
 iLove To work on creative ideas , Building Structures and exploring new things.
 iThink • iLearn • iBuild`,
+section : "home"
     },
     {
       Icon: <Stack />,
@@ -44,6 +49,7 @@ iThink • iLearn • iBuild`,
       conclusion: {
         content: "Always exploring better tools, patterns, and systems.",
       },
+      section : "home"
     },
     {
       Icon: <Projects />,
@@ -51,9 +57,10 @@ iThink • iLearn • iBuild`,
       username: "@Projects",
       time: "2d",
       threadOf: "Engineering Projects",
-        threadTitle : "Projects",
+      threadTitle : "Projects",
       text: "A breakdown of systems I have designed and built... Tap to explore architecture, challenges and optimizations.",
-      replies: 6
+      replies: 6,
+      section : "home"
     },
     {
       Icon: <Goal />,
@@ -66,6 +73,20 @@ iThink • iLearn • iBuild`,
       text: `• JS & Node Core Fundamentals 
       • Building Casemate 
       • Exploring LangChain for real AI systems`,
+      section : "home"
+    },
+    {
+      Icon: <Mail className={"w-4 h-4"}/>,
+      category: "Contact",
+      username: "@Contact",
+      time: "4d",
+      threadOf: "Contact Details",
+      threadTitle : "contact",
+      // conclusion : {
+      //   content : "Try contacting me"
+      // },
+      replies: 6,
+      section : "home"
     },
     {
       Icon: <Qoute />,
@@ -79,6 +100,7 @@ iThink • iLearn • iBuild`,
         content: "Code is like humor. When you have to explain it, it’s bad.",
       },
       footer: true,
+      section : "home"
     },
     {
       Icon: <Intro />,
@@ -96,7 +118,8 @@ iThink • iLearn • iBuild`,
         "SSE based realtime download tracking",
       ],
       image: "unidown.png",
-      actionAllowed : true
+      actionAllowed : true,
+      pinned : true
     },
     {
   Icon: <PIntro />,
@@ -164,7 +187,7 @@ iThink • iLearn • iBuild`,
 },
 
 {
-  Icon: <IconArchitecture className="w-5 h-5 text-neutral-400" />,
+  Icon: <IconAI className="w-5 h-5 text-neutral-400" />,
   threadId: "unidown",
   type: "realtime",
   category: "Realtime",
@@ -346,6 +369,96 @@ iThink • iLearn • iBuild`,
         "AI-assisted legal context exploration",
       ],
       image : "casemate.png",
-      actionAllowed : true
+      actionAllowed : true,
+      pinned : true
     },
-  ];
+  {
+    Icon: <IconContext className="w-5 h-5 text-neutral-400" />,
+    threadId: "contact",
+    type: "intro",
+    category: "Connection",
+    username: "@Connection",
+    time: "now",
+    skills: {
+        "Open Thread": "",
+      },
+    text:
+      `If something here resonated with you 
+      a project | an idea, or the way I approach systems 
+      — feel free to reach out.`,
+  },
+
+  {
+    
+    Icon: <IconWorkflow className="w-5 h-5 text-neutral-400" />,
+    threadId: "contact",
+    type: "availability",
+    category: "Status",
+    username: "@Status",
+    time: "now",
+    skills: {
+        "Current Availability": "",
+      },
+    text:
+      "Currently open to engineering roles, collaborative projects and conversations around system design or product architecture.",
+  },
+
+  {
+    
+    Icon: <IconDesign className="w-5 h-5 text-neutral-400" />,
+    threadId: "contact",
+    type: "communication",
+    category: "Preference",
+    username: "@Preference",
+    time: "now",
+    skills : {"How I Prefer to Connect":""},
+    text:
+      `I appreciate thoughtful conversations
+       whether it’s discussing architecture decisions, 
+       project ideas or engineering challenges.`,
+  },
+
+  {
+    
+    Icon: <IconInfra className="w-5 h-5 text-neutral-400" />,
+    threadId: "contact",
+    type: "email",
+    category: "Channel",
+    username: "@Channel",
+    time: "now",
+    skills: {"Primary Channel":""},
+    bulletsIcon: [
+       {text : "Email → venu@google.com" , icon : <Mail className="w-3.5 h-5 text-neutral-400 shrink-0" />,url : "mailto:vasulallu09@gmail.com"},
+     {text : "GitHub → github.com/codxvenu", icon : <GithubIcon className="w-3.5 h-5 text-neutral-400 shrink-0" />,url : "http://github.com/codxvenu"},
+       {text :"LinkedIn → linkedin.com/in/venu-sharma-19628328a" , icon : <LinkedinIcon className="w-3.5 h-5 text-neutral-400 shrink-0" />,url : "http://linkedin.com/in/venu-sharma-19628328a/"},
+    ],
+  },
+  {
+    Icon: <IconDirection className="w-5 h-5 text-neutral-400" />,
+    threadId: "contact",
+    type: "closing",
+    category: "Closing",
+    username: "@Closing",
+    time: "now",
+    skills: {"Final Note" : ""},
+    quote: {
+        // author: "Cory House",
+        // handle: "@CoryHouse",
+        content: `Good systems are rarely built alone. If you're working on something meaningful 
+        — I'd be glad to listen and contribute.`,
+      },
+      conclusion : {
+        content : "Made with love By Venu Sharma"
+      }
+    }
+];
+export const TechStack = [
+  "React",
+  "Next.js",
+  "JavaScript",
+  "Tailwind CSS",
+  "Redux",
+  "HTML5",
+  "Material UI",
+  "Redux"
+];

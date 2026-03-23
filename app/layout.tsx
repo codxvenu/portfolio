@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
+import Footer from "@/app/component/Footer";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -26,7 +26,13 @@ export default function RootLayout({
     <html lang="en">
       <body suppressHydrationWarning className={` antialiased`}
       >
+          <div className="bg-black text-white min-h-screen flex justify-center max-h-max mb-12">
+      <div className="w-full max-w-md border-x border-neutral-900 relative">
+      
         {children}
+        <Footer/>
+          </div>
+    </div>
       </body>
     </html>
   );

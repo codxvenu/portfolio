@@ -5,11 +5,9 @@ import { useRouter } from 'next/navigation';
 
 
 
-const Casoul = ({postz,activeThread = false}) => {
- 
-  const router = useRouter();
-
- 
+const Casoul = ({postz,activeThread = false , action=true,Imageref,setImage}) => {
+   const router = useRouter();
+   
   return (
       <>
        {!!postz?.length &&
@@ -51,7 +49,7 @@ const Casoul = ({postz,activeThread = false}) => {
                     {post.solution}
                   </div>
                 )}
-                {post.bullets && (
+               {post.bullets && (
                   <div className="mt-3 space-y-1">
                     {post.bullets.map((b, i) => (
                       <div key={i} className="text-[13px] text-neutral-400">
@@ -73,7 +71,7 @@ const Casoul = ({postz,activeThread = false}) => {
                       {post.threadOf}
                     </div>
                     <div className="text-[12px] text-neutral-500 mt-1">
-                      {post.replies} replies
+                      {/* {post.replies} replies */} Click to see more
                     </div>
                   </div>
                 )}
@@ -104,7 +102,20 @@ const Casoul = ({postz,activeThread = false}) => {
                               ? "Cloud & Integrations"
                               : section}
                         </div>
-                       {post.skills[section]&& <img src={post.skills[section]} alt="" />}
+                       {post.skills[section]&& <img src={post.skills[section]} alt="" ref={Imageref} onMouseMove={(e)=>setImage(e.clientX)}/>
+                       }
+                      </div>
+                    ))}
+                  </div>
+                )}
+                {post.bulletsIcon && (
+                  <div className="mt-3 space-y-1">
+                    {post.bulletsIcon.map((b, i) => (
+                      <div key={i} className="text-[13px] text-neutral-400 flex items-center gap-2 cursor-pointer" onClick={()=>window.open(b.url)}>
+                        {b.icon} 
+                        <h2 className='w-[30vw] block truncate min-w-0'>
+                        {b.text}
+                        </h2>
                       </div>
                     ))}
                   </div>
@@ -116,14 +127,14 @@ const Casoul = ({postz,activeThread = false}) => {
                 )}
 {post.quote && (
   <div className="mt-3 border border-neutral-800 rounded-2xl p-3">
-  <div className="text-sm font-semibold">
+ {post.quote.author && <div className="text-sm font-semibold">
       {post.quote.author}
       <span className="text-neutral-500 font-normal ml-2">
         {post.quote.handle}
       </span>
-    </div>
+    </div>}
 
-    <div className="text-[14px] mt-1 text-neutral-300">
+    <div className="text-[14px] mt-1 text-neutral-300 whitespace-pre-line">
       {post.quote.content}
     </div>
   </div>
@@ -135,7 +146,7 @@ const Casoul = ({postz,activeThread = false}) => {
 
                 {/* Actions */}
                <div className="flex justify-between mt-3 text-neutral-500 text-sm max-w-sm">
-                  {post.actionAllowed  && <>
+                  {post.actionAllowed && action  && <>
                     <IconComment />
                     <IconRetweet />
                     <IconLike />
