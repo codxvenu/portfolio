@@ -60,7 +60,7 @@ const Casoul = ({postz,activeThread = false , action=true}) => {
                   </div>
                 )}
                 {post.image && (
-                  <Image alt='image' width={100} height={192} className="mt-3 w-full! h-48! bg-neutral-800 rounded-2xl object-cover" src={`/${post.image}`} />
+                  <Image alt='image' width={600} height={192} className="mt-3 w-full! h-48! bg-neutral-800 rounded-2xl object-cover" src={`/${post.image}`} />
                 )}
                 {post.threadOf && (
                   <div className="mt-3 border border-neutral-800 rounded-xl p-3">
