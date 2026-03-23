@@ -12,11 +12,11 @@ const Search = () => {
   <HighlightsIntro />
 
   <HighlightCard>
-     <Posts postz={[Project[0]]}/>
+ //    <Posts postz={[Project[0]]}/>
   </HighlightCard>
 
   <HighlightCard>
-    <Posts postz={[Project[1]]}/>
+    //<Posts postz={[Project[1]]}/>
   </HighlightCard>
 
 </HighlightsSection>
