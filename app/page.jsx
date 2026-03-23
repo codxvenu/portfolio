@@ -1,7 +1,7 @@
 "use client";
 import Posts from "@/app/component/Posts";
 import HomeHeader from "@/app/component/headers/HomeHeader";
-
+import Footer from "@/app/component/Footer";
 import { useEffect, useState } from "react";
 import {posts,projects} from "@/app/Constants"
 export default function XMobileExactClonePortfolio() {
@@ -13,7 +13,7 @@ export default function XMobileExactClonePortfolio() {
         <Posts
           postz={posts.filter(i=> !i.threadId && !i.threadTitle)}
         />
-       
+      <Footer/>
       </div>
     </div>
   );
