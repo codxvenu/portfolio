@@ -11,7 +11,7 @@ export default function XMobileExactClonePortfolio() {
       
       <HomeHeader/>
         <Posts
-          postz={posts.filter(i.threadId == undefined || i.threadTitle == undefined)}
+          postz={posts.filter(i=>!i.threadId || !i.threadTitle)}
         />
        
       </div>
