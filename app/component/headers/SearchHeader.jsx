@@ -12,7 +12,7 @@ const SearchHeader = ({ }) => {
           height={36}
           className="rounded-full"
         />
-        {search && (
+       
           <div>
             <input
               type="text"
@@ -20,7 +20,7 @@ const SearchHeader = ({ }) => {
               placeholder="Search X"
             />
           </div>
-        )}
+        
       </div>
      
     </>
