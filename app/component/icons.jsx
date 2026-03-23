@@ -199,3 +199,171 @@ export const Mail = ({ className }) => (
             <path d="M22 6l-10 7L2 6" />
           </svg>
 );
+export const Goal = ({ className }) => (
+<svg 
+  width="28" 
+  className={className}
+  height="28" 
+  viewBox="0 0 24 24" 
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <rect width="24" height="24" rx="8" />
+
+  <circle 
+    cx="12" 
+    cy="12" 
+    r="5.5" 
+    stroke="white" 
+    strokeWidth="1.4"
+    fill="none"
+  />
+  <circle cx="12" cy="12" r="1.8" fill="white"/>
+
+  <path 
+    d="M7 17 L12 12" 
+    stroke="white" 
+    strokeWidth="1.4" 
+    strokeLinecap="round"
+  />
+  <path 
+    d="M11.2 12 L13 12 L12 13.8" 
+    fill="white"
+  />
+</svg>
+);
+
+
+export const IconComment = () => (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+    >
+      <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z" />
+    </svg>
+  );
+
+export  const IconRetweet = () => (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+    >
+      <path d="M17 1l4 4-4 4" />
+      <path d="M3 11V9a4 4 0 0 1 4-4h14" />
+      <path d="M7 23l-4-4 4-4" />
+      <path d="M21 13v2a4 4 0 0 1-4 4H3" />
+    </svg>
+  );
+
+export  const IconLike = () => (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+    >
+      <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 22l7.8-8.6 1-1a5.5 5.5 0 0 0 0-7.8z" />
+    </svg>
+  );
+
+export  const IconViews = () => (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+    >
+      <path d="M3 12s3.5-6 9-6 9 6 9 6-3.5 6-9 6-9-6-9-6z" />
+      <circle cx="12" cy="12" r="2.5" />
+    </svg>
+  );
+
+ export const IconShare = () => (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+    >
+      <circle cx="18" cy="5" r="3" />
+      <circle cx="6" cy="12" r="3" />
+      <circle cx="18" cy="19" r="3" />
+      <path d="M8.7 13.4l6.6 3.2M15.3 7.4L8.7 10.6" />
+    </svg>
+  );
+//   export const PIntro = ()=>(
+//     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6">
+//   <rect x="4" y="6" width="16" height="12" rx="2"/>
+//   <path d="M8 10h8M8 14h5"/>
+// </svg>
+//   )
+  export const PIntro = ({ className }) => (
+  <svg viewBox="0 0 24 24" width="24" 
+  height="24"  className={className} fill="none" stroke="currentColor" strokeWidth="1.6">
+    <rect x="4" y="6" width="16" height="12" rx="2"/>
+    <path d="M8 10h8M8 14h5"/>
+  </svg>
+);
+export const IconContext = ({ className }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.6">
+    <circle cx="12" cy="12" r="8"/>
+    <path d="M12 8v4l2 2"/>
+  </svg>
+);
+export const IconDesign = ({ className }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.6">
+    <path d="M4 18l8-12 8 12"/>
+    <path d="M9 14h6"/>
+  </svg>
+);
+export const IconWorkflow = ({ className }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.6">
+    <circle cx="6" cy="12" r="2"/>
+    <circle cx="12" cy="12" r="2"/>
+    <circle cx="18" cy="12" r="2"/>
+    <path d="M8 12h2M14 12h2"/>
+  </svg>
+);
+export const IconArchitecture = ({ className }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.6">
+    <rect x="6" y="5" width="12" height="4"/>
+    <rect x="4" y="11" width="16" height="4"/>
+    <rect x="6" y="17" width="12" height="2"/>
+  </svg>
+);
+export const IconAI = ({ className }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.6">
+    <circle cx="12" cy="12" r="5"/>
+    <path d="M12 7v-2M12 19v-2M17 12h2M5 12h2"/>
+  </svg>
+);
+export const IconInfra = ({ className }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.6">
+    <rect x="3" y="6" width="18" height="6" rx="1"/>
+    <rect x="3" y="14" width="18" height="4" rx="1"/>
+  </svg>
+);
+export const IconDirection = ({ className }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.6">
+    <path d="M5 15l5-5 4 4 5-6"/>
+    <path d="M17 8h2v2"/>
+  </svg>
+);
+export const IconLearning = ({ className }) => (
+  <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="1.6">
+    <path d="M6 4h10a2 2 0 012 2v12l-5-3-5 3V6a2 2 0 012-2z"/>
+  </svg>
+);

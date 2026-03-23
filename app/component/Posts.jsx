@@ -1,92 +1,26 @@
 "use client"
 import React, { useEffect, useRef, useState } from 'react'
+import { IconComment, IconLike, IconRetweet, IconShare, IconViews } from './icons'
+import { useRouter } from 'next/navigation';
 
 
- const IconComment = () => (
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-    >
-      <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z" />
-    </svg>
-  );
 
-  const IconRetweet = () => (
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-    >
-      <path d="M17 1l4 4-4 4" />
-      <path d="M3 11V9a4 4 0 0 1 4-4h14" />
-      <path d="M7 23l-4-4 4-4" />
-      <path d="M21 13v2a4 4 0 0 1-4 4H3" />
-    </svg>
-  );
+const Casoul = ({postz,activeThread = false}) => {
+ 
+  const router = useRouter();
 
-  const IconLike = () => (
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-    >
-      <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 1 0-7.8 7.8l1 1L12 22l7.8-8.6 1-1a5.5 5.5 0 0 0 0-7.8z" />
-    </svg>
-  );
-
-  const IconViews = () => (
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-    >
-      <path d="M3 12s3.5-6 9-6 9 6 9 6-3.5 6-9 6-9-6-9-6z" />
-      <circle cx="12" cy="12" r="2.5" />
-    </svg>
-  );
-
-  const IconShare = () => (
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-    >
-      <circle cx="18" cy="5" r="3" />
-      <circle cx="6" cy="12" r="3" />
-      <circle cx="18" cy="19" r="3" />
-      <path d="M8.7 13.4l6.6 3.2M15.3 7.4L8.7 10.6" />
-    </svg>
-  );
-
-
-const Casoul = ({post,activeThread,setActiveThread }) => {
+ 
   return (
       <>
-       {!!post?.length &&
-          post.map((post, i) => (
+       {!!postz?.length &&
+          postz.map((post, i) => (
             <div
               key={i}
-              className={activeThread ? "flex gap-3 px-4 py-3 mb-4" : "flex gap-3 px-4 py-3 border-b border-neutral-800"}
+              className={activeThread ? "flex gap-3 px-4 py-3 mb-4 " : " flex gap-3 px-4 py-3 border-b border-neutral-800"}
             >
               <div className="relative flex">
-              {!!post?.Icon && post.Icon}
-               {activeThread && i !== post.length - 1 && (
+              {post.Icon}
+               {activeThread && i !== postz.length - 1 && (
          <div className="absolute left-1/2 top-10 bottom-10 w-[2px] h-[95%] bg-neutral-800 -translate-x-1/2" />
       )}
               </div>
@@ -100,23 +34,7 @@ const Casoul = ({post,activeThread,setActiveThread }) => {
                 </div>}
 
              
-                {post.threadOf && (
-                  <div className="mt-3 border border-neutral-800 rounded-xl p-3">
-                    <div className="text-[13px] text-neutral-400">Thread</div>
-                    <div
-                      className="font-semibold text-[14px] mt-1 cursor-pointer"
-                      onClick={() => {
-                        setActiveThread("Project");
-                        setPost(post.posts);
-                      }}
-                    >
-                      {post.threadOf}
-                    </div>
-                    <div className="text-[12px] text-neutral-500 mt-1">
-                      {post.replies} replies
-                    </div>
-                  </div>
-                )}
+                
                 {post.result && (
                   <div className="mt-3 text-[13px] text-neutral-300">
                     <span className="font-semibold text-neutral-200">
@@ -142,9 +60,23 @@ const Casoul = ({post,activeThread,setActiveThread }) => {
                     ))}
                   </div>
                 )}
-                {/* {post.image && (
-                  <img className="mt-3 h-48 bg-neutral-800 rounded-2xl w-full object-cover" src={"/prof.png"} />
-                )} */}
+                {post.image && (
+                  <img className="mt-3 h-48 bg-neutral-800 rounded-2xl w-full object-cover" src={`/${post.image}`} />
+                )}
+                {post.threadOf && (
+                  <div className="mt-3 border border-neutral-800 rounded-xl p-3">
+                    <div className="text-[13px] text-neutral-400">Thread</div>
+                    <div
+                      className="font-semibold text-[14px] mt-1 cursor-pointer"
+                      onClick={() => router.push(window.location.href+"/"+post?.threadTitle,{scroll : true})}
+                    >
+                      {post.threadOf}
+                    </div>
+                    <div className="text-[12px] text-neutral-500 mt-1">
+                      {post.replies} replies
+                    </div>
+                  </div>
+                )}
                 {post.title && (
                   <div className="mt-2 font-semibold text-[15px]">
                     {post.title}
@@ -203,7 +135,7 @@ const Casoul = ({post,activeThread,setActiveThread }) => {
 
                 {/* Actions */}
                <div className="flex justify-between mt-3 text-neutral-500 text-sm max-w-sm">
-                  {!activeThread && !post.footer && !post.skills &&!post.threadOf && <>
+                  {post.actionAllowed  && <>
                     <IconComment />
                     <IconRetweet />
                     <IconLike />
