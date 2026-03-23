@@ -23,17 +23,8 @@ const Search = () => {
      <HighlightsSection>
   <HighlightsIntro />
 
-<<<<<<< HEAD
      <Posts postz={post} action={false}/>
-=======
-  <HighlightCard>
-  
-  </HighlightCard>
 
-  <HighlightCard>
-
-  </HighlightCard>
->>>>>>> c1baefe1f6e09d2646c8333e0c2b0e33e481e543
 
 </HighlightsSection>
      

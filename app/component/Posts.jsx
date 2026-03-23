@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 
 
 
-const Casoul = ({postz,activeThread = false , action=true,Imageref,setImage}) => {
+const Casoul = ({postz,activeThread = false , action=true}) => {
    const router = useRouter();
    
   return (
@@ -102,7 +102,7 @@ const Casoul = ({postz,activeThread = false , action=true,Imageref,setImage}) =>
                               ? "Cloud & Integrations"
                               : section}
                         </div>
-                       {post.skills[section]&& <img src={post.skills[section]} alt="" ref={Imageref} onMouseMove={(e)=>setImage(e.clientX)}/>
+                       {post.skills[section]&& <img src={post.skills[section]} alt="" />
                        }
                       </div>
                     ))}
