@@ -372,6 +372,133 @@ section : "home"
       actionAllowed : true,
       pinned : true
     },
+    {
+      Icon: <Intro />,
+      category: "System",
+      username: "@System",
+      time: "recent",
+      threadId : "Projects",
+      threadTitle : "FileToLink",
+      threadOf: "filetolink.in",
+      conclusion:{content :  `Multi-session Telegram file streaming & download server`},
+      bullets: [
+        "GramJS & Node.js based streaming pipeline",
+        "Multi-session bot worker load balancer",
+        "Range request compliant seekable stream",
+        "Sliding-window parallel prefetch queue",
+      ],
+      image : "filetolink.png",
+      actionAllowed : true,
+      pinned : true
+    },
+  {
+    Icon : <PIntro />,
+    threadId : "filetolink",
+    type: "intro",
+    category: "System",
+    username: "@filetolink",
+    time: "recent",
+    title: "FileToLink",
+    text:
+      "A media streaming and delivery platform designed to convert Telegram storage into seekable direct HTTP download endpoints through structured client pools.",
+  },
+  {
+    Icon: <IconContext className="w-5 h-5 text-neutral-400" />,
+    threadId : "filetolink",
+    type: "problem",
+    category: "Context",
+    username: "@filetolink",
+    time: "recent",
+    title: "Why FileToLink Exists",
+    text:
+      "Telegram limits bot download speeds and lacks seekable HTTP transport natively. FileToLink bypasses these rate limits and latency constraints for direct playback.",
+  },
+  {
+    Icon: <IconDesign className="w-5 h-5 text-neutral-400" />,
+    threadId : "filetolink",
+    type: "approach",
+    category: "Design",
+    username: "@filetolink",
+    time: "recent",
+    title: "System Approach",
+    text:
+      "The platform prioritizes latency-hiding design patterns — ensuring immediate chunk availability and smooth seek capabilities for the media receiver.",
+  },
+  {
+    Icon: <IconWorkflow className="w-5 h-5 text-neutral-400" />,
+    threadId : "filetolink",
+    type: "workflow",
+    category: "Flow",
+    username: "@filetolink",
+    time: "recent",
+    title: "Streaming Lifecycle Thinking",
+    bullets: [
+      "HTTP Range request → Express router",
+      "Workload check → select bot worker",
+      "Request alignment → 1MB block boundary",
+      "Prefetch scheduler → 4MB sliding window",
+      "Boundary slicing → precise range payload",
+    ],
+  },
+  {
+    Icon: <IconArchitecture className="w-5 h-5 text-neutral-400" />,
+    threadId : "filetolink",
+    type: "architecture",
+    category: "Architecture",
+    username: "@filetolink",
+    time: "recent",
+    title: "Architecture Direction",
+    text:
+      "Designed as a load-balanced, multi-session worker system where connection state and byte streams operate as concurrent, self-healing queues.",
+  },
+  {
+    Icon: <IconAI className="w-5 h-5 text-neutral-400" />,
+    threadId : "filetolink",
+    type: "performance",
+    category: "Speed",
+    username: "@filetolink",
+    time: "recent",
+    title: "Sliding Window Prefetch",
+    text:
+      "We introduced background chunk pre-fetching to fully saturate network bandwidth, completely masking Telegram round-trip latency.",
+  },
+  {
+    Icon: <IconInfra className="w-5 h-5 text-neutral-400" />,
+    threadId : "filetolink",
+    type: "infra",
+    category: "Infrastructure",
+    username: "@filetolink",
+    time: "recent",
+    title: "Operational Foundation",
+    bullets: [
+      "Multi-client session rotation pool",
+      "Safe local session persistence",
+      "Automated FloodWait cooldown timers",
+      "Resource-efficient stream lifecycle",
+    ],
+  },
+  {
+    Icon: <IconDirection className="w-5 h-5 text-neutral-400" />,
+    threadId : "filetolink",
+    type: "direction",
+    category: "Evolution",
+    username: "@filetolink",
+    time: "recent",
+    title: "Where It Is Heading",
+    text:
+      "FileToLink is transitioning toward a decentralized proxy network of bot clusters for globally distributed, high-capacity file streaming.",
+  },
+  {
+    Icon: <IconLearning className="w-5 h-5 text-neutral-400" />,
+    threadId : "filetolink",
+    type: "reflection",
+    category: "Learning",
+    username: "@filetolink",
+    time: "recent",
+    title: "Engineering Takeaway",
+    text:
+      "Designing FileToLink deepened understanding of asynchronous stream synchronization, connection concurrency control, and range-compliant data piping.",
+  },
   {
     Icon: <IconContext className="w-5 h-5 text-neutral-400" />,
     threadId: "contact",
@@ -455,10 +582,11 @@ section : "home"
 export const TechStack = [
   "React",
   "Next.js",
+  "Node.js",
+  "Express",
   "JavaScript",
   "Tailwind CSS",
   "Redux",
   "HTML5",
-  "Material UI",
-  "Redux"
+  "Material UI"
 ];
